@@ -1,0 +1,149 @@
+.note-preview {
+  display: block;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.note-preview:hover {
+  border-color: var(--accent);
+}
+.note-preview > .icon {
+  width: 18px;
+  height: 18px;
+  color: var(--accent);
+  margin-bottom: 15px;
+}
+.note-preview h3 {
+  font-size: 0.88rem;
+  margin-bottom: 9px;
+}
+.note-preview p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.note-preview + .note-preview {
+  margin-top: 14px;
+}
+.notes-layout {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.65fr) minmax(0, 1.35fr);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+}
+.notes-index {
+  border-right: 1px solid var(--line);
+  max-height: 730px;
+  overflow: auto;
+}
+.note-index-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: left;
+  gap: 9px;
+  padding: 22px;
+  color: var(--ink);
+  background: transparent;
+  border-bottom: 1px solid var(--line);
+  border-left: 3px solid transparent;
+}
+.note-index-item:hover {
+  background: var(--surface-soft);
+}
+.note-index-item[aria-pressed='true'] {
+  border-left-color: var(--accent);
+  background: var(--accent-soft);
+}
+.note-index-item .small {
+  font-size: 0.63rem;
+}
+.note-index-item strong {
+  font-size: 0.86rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.note-excerpt {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.75rem;
+  color: var(--muted);
+  white-space: pre-wrap;
+}
+.note-reader {
+  padding: 30px;
+  min-width: 0;
+  min-height: 480px;
+}
+.note-reader > header {
+  display: flex;
+  gap: 20px;
+  align-items: start;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 24px;
+}
+.note-reader h2 {
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  font-weight: 550;
+  line-height: 1.4;
+  margin-block: 12px;
+}
+.note-reader > header > div {
+  min-width: 0;
+}
+.note-reader > header .text-link {
+  flex-wrap: wrap;
+  font-size: 0.69rem;
+}
+.note-reader > header .button {
+  flex-shrink: 0;
+}
+.note-reader .small {
+  font-size: 0.69rem;
+}
+.note-body {
+  margin-top: 28px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 0.88rem;
+  line-height: 1.9;
+}
+.field .note-textarea {
+  min-height: 260px;
+  line-height: 1.8;
+}
+@media (min-width: 951px) and (max-width: 1220px) {
+  .recent-notes .note-preview + .note-preview {
+    margin-top: 0;
+  }
+}
+@media (max-width: 760px) {
+  .notes-layout {
+    grid-template-columns: 1fr;
+  }
+  .notes-index {
+    max-height: 250px;
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .note-index-item {
+    padding: 17px 20px;
+  }
+  .note-reader {
+    padding: 22px;
+    min-height: 360px;
+  }
+  .note-reader > header {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "singleAttributePerLine": true,
+  "htmlWhitespaceSensitivity": "css",
+  "proseWrap": "always",
+  "overrides": [
+    {
+      "files": "*.svg",
+      "options": {
+        "parser": "html"
+      }
+    }
+  ]
+}
